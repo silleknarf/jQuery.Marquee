@@ -167,10 +167,10 @@
 
                 // Remove bottom margin from 2nd element if duplicated
                 if (o.duplicated) {
-        		    $this.find('.js-marquee:last').css({
-        		        'margin-bottom': 0
-        		    });
-        		}
+		    $this.find('.js-marquee:last').css({
+			'margin-bottom': 0
+		    });
+		}
 
                 var elHeight = $this.find('.js-marquee:first').height() + o.gap;
 
@@ -396,7 +396,7 @@
                 }
 
                 // fire event
-                $this.trigger('beforeStarting', { marquee: o });
+                $this.trigger('beforeStarting', { duration: o.duration});
 
                 // If css3 support is available than do it with css3, otherwise use jQuery as fallback
                 if (css3AnimationIsSupported) {
