@@ -396,7 +396,7 @@
                 }
 
                 // fire event
-                $this.trigger('beforeStarting', { duration: this.duration});
+                $this.trigger('beforeStarting', { duration: o.duration});
 
                 // If css3 support is available than do it with css3, otherwise use jQuery as fallback
                 if (css3AnimationIsSupported) {
