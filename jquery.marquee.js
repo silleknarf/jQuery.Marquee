@@ -147,7 +147,7 @@
             }
 
             // wrap both inner elements into one div
-            $this.wrapInner('<div style="width:100000px" class="js-marquee-wrapper"></div>');
+            $this.wrapInner('<div style="width:' + o.maximumTextWidth + 'px" class="js-marquee-wrapper"></div>');
 
             // Save the reference of the wrapper
             $marqueeWrapper = $this.find('.js-marquee-wrapper');
@@ -484,6 +484,8 @@
         // on hover pause the marquee - using jQuery plugin https://github.com/tobia/Pause
         pauseOnHover: false,
         // the marquee is visible initially positioned next to the border towards it will be moving
-        startVisible: false
+        startVisible: false,
+        // set the maximum width of the underlying text div
+        maximumTextWidth: 100000
     };
 })(jQuery);
